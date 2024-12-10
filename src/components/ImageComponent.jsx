@@ -40,15 +40,12 @@ const Overlay = styled.div`
  * @param {Object} props - The component's props.
  * @param {Object} props.data - The image data object containing previewURL, views, downloads, and collections.
  * @param {string} props.data.previewURL - The URL of the image to display.
- * @param {number} props.data.views - The number of views of the image.
- * @param {number} props.data.downloads - The number of downloads of the image.
- * @param {string} props.data.collections - The collections the image belongs to.
  * @param {function} props.openModal - The function to open the modal when the image is clicked.
  * 
  * @returns {JSX.Element} - The rendered ImageComponent.
  */
 const ImageComponent = ({ data, openModal }) => {
-  const { previewURL, views, downloads, collections } = data;
+  const { previewURL } = data;
 
   return (
     <ImageContainer onClick={() => openModal(data)}>
