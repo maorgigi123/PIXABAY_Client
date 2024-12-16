@@ -83,6 +83,7 @@ function App() {
       if (dataExists) {
         // If data exists, don't send a new request
         setLoading(false);
+        setFinishAllPhotos(false);
         return;
       }
 
